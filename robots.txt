@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://silver60sec.netlify.app/sitemap.xml
+Sitemap: https://silver60sec.github.io/silver60sec-landing/sitemap.xml
