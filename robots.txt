@@ -1,6 +1,8 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://silver60sec.github.io/silver60sec-landing/sitemap.xml
 Sitemap: https://silver60sec.github.io/silver60sec-landing/sitemap_index.xml
 Sitemap: https://silver60sec.github.io/silver60sec-landing/sitemap-1.xml
+Sitemap: https://silver60sec.github.io/silver60sec-landing/sitemap-20250812.xml
 Sitemap: https://silver60sec.github.io/silver60sec-landing/sitemap.txt
