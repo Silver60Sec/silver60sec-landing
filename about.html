@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Silver60Sec</title>
+  <meta name="description" content="Chi è Silver60Sec e cosa trovi nel canale: micro‑hack rapidi e pratici per over‑50.">
+  <link rel="canonical" href="https://silver60sec.netlify.app/">
+  <meta name="robots" content="index,follow">
+  <!-- Inserisci qui (opzionale) il meta di verifica GSC di questa property -->
+  <!-- <meta name="google-site-verification" content="PASTE_TOKEN_FOR_https://silver60sec.github.io/silver60sec-landing/"> -->
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="logo-512.png">
+  <meta property="og:title" content="About — Silver60Sec">
+  <meta property="og:description" content="Chi è Silver60Sec e cosa trovi nel canale: micro‑hack rapidi e pratici per over‑50.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://silver60sec.github.io/silver60sec-landing/">
+  <meta property="og:image" content="logo-512.png">
+  <style>
+:root {
+  --bg:#0a0c12; --bg2:#0f121a; --text:#eaf0f6; --muted:#9aa5b1;
+  --edge:rgba(255,255,255,0.10); --accent:#ff0033; --accent-2:#ff4d4d;
+  --glow: 0 0 0 0 rgba(255,0,51,.0);
+  --glow-hover: 0 14px 36px rgba(255,0,51,.28), 0 0 0 1px rgba(255,255,255,.08);
+}
+* { box-sizing:border-box }
+html,body { height:100% }
+body {
+  margin:0; color:var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
+  background:
+    radial-gradient(1200px 800px at 80% -10%, rgba(255,0,51,0.18), transparent 60%),
+    radial-gradient(900px 600px at 0% 100%, rgba(255,77,77,0.14), transparent 60%),
+    linear-gradient(180deg, var(--bg), var(--bg2));
+}
+.wrap { max-width: 1120px; margin: 0 auto; padding: 28px 24px 48px; }
+.header { display: grid; place-items: center; text-align: center; gap: 14px; padding: 12px 0 10px; }
+.logo { width: 110px; height: 110px; border-radius: 50%; box-shadow: 0 0 0 8px rgba(255,0,51,.12); }
+h1 { font-size: clamp(38px, 6.2vw, 68px); line-height:1.05; margin: 6px 0 0; letter-spacing:.2px; }
+.subtitle { color: var(--muted); margin-top: 4px; font-size: 18px; }
+.cta-row { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top: 14px; }
+.btn {
+  display:inline-flex; align-items:center; gap:10px; padding:13px 18px; border-radius:14px;
+  text-decoration:none; font-weight:800; letter-spacing:.2px; border:1px solid var(--edge);
+  background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.02));
+  color:var(--text); transition: transform .12s ease, box-shadow .15s ease, border-color .12s ease;
+  box-shadow: var(--glow);
+}
+.btn:hover { transform: translateY(-1px); box-shadow: var(--glow-hover); border-color: rgba(255,255,255,.22); }
+.btn.primary { background: linear-gradient(90deg, var(--accent), var(--accent-2)); color:#0a0c12; border:none; }
+.section { margin-top: 28px; }
+.card { background: rgba(255,255,255,.05); border: 1px solid var(--edge); border-radius: 22px; padding: 22px;
+         backdrop-filter: blur(6px); box-shadow: 0 10px 28px rgba(0,0,0,.25); }
+.card p { margin: 0 0 12px; color: var(--text); line-height: 1.75; font-size: 16px; }
+footer { margin-top: 40px; padding-top: 22px; border-top: 1px dashed rgba(255,255,255,.14); color: var(--muted); font-size: 14px; }
+.footer-links { display:flex; gap:16px; flex-wrap:wrap; justify-content:center; margin-top: 8px; }
+.footer-links a { color: var(--muted); text-decoration:none; border-bottom: 1px dotted rgba(255,255,255,.18); }
+.footer-links a:hover { color: #fff; border-color: rgba(255,255,255,.34); }
+
+/* Shorts grid */
+.shorts { margin-top: 18px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; justify-items:center; }
+@media (max-width: 980px) { .shorts { grid-template-columns: 1fr; } }
+.short-tile { width: 100%; max-width: 360px; border-radius: 18px; overflow: hidden; position: relative;
+               background: #12131a; aspect-ratio: 9 / 16; border: 1px solid rgba(255,255,255,.08);
+               box-shadow: var(--glow); transition: box-shadow .15s ease, transform .12s ease; }
+.short-tile:hover { box-shadow: var(--glow-hover); transform: translateY(-2px); }
+.short-tile iframe { width: 100%; height: 100%; border: 0; display: block; }
+.short-caption { position:absolute; left:10px; bottom:10px; right:10px; color:#fff; font-size:13px; text-shadow: 0 2px 8px rgba(0,0,0,.7); }
+
+/* Nav */
+.topnav { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:8px; }
+.topnav a { color: var(--muted); text-decoration:none; border-bottom: 1px dotted rgba(255,255,255,.18); }
+.topnav a:hover { color: #fff; border-color: rgba(255,255,255,.34); }
+</style>
+  
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <img class="logo" src="logo-120.png" alt="Logo Silver60Sec">
+      <h1>Silver60Sec</h1>
+      <div class="subtitle">Micro‑hack di produttività per over‑50 • 60 secondi per arrivare al punto</div>
+      <nav class="topnav">
+        <a href="./">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./contatti.html">Contatti</a>
+      </nav>
+      <div class="cta-row">
+        <a class="btn primary" href="https://www.youtube.com/@silver60sec" rel="nofollow noopener noreferrer" target="_blank">Guarda su YouTube</a>
+        <a class="btn" href="https://www.youtube.com/@silver60sec?sub_confirmation=1" rel="nofollow noopener noreferrer" target="_blank">Iscriviti ora</a>
+      </div>
+    </header>
+    
+<section class="section">
+  <div class="card">
+    <h2>Chi sono e cosa trovi qui</h2>
+    <p>Silver60Sec nasce per chi ha superato i 50 anni e vuole usare la tecnologia in modo pratico, senza perdere tempo.
+       Ogni contenuto è pensato per arrivare al punto in 60 secondi: niente giri di parole, solo passaggi chiari,
+       schermate essenziali e risultati verificabili.</p>
+    <p>Nel canale troverai micro‑hack per organizzare documenti e foto, proteggere la privacy, creare promemoria davvero utili,
+       semplificare la posta e tenere in ordine le password. Uso esempi concreti e mostro dove cliccare: l’obiettivo è farti risparmiare
+       minuti ogni giorno e rendere il digitale meno complicato.</p>
+    <p>Questa pagina esiste perché i motori di ricerca comprendono meglio un sito con più sezioni e spiegazioni testuali.
+       Se arrivi da Google e ti interessa ciò che leggi, passa dalla Home per vedere i 3 Shorts più visti e iscriverti al canale.</p>
+  </div>
+</section>
+
+    <footer>
+      <div class="footer-links">
+        <a href="https://www.youtube.com/@silver60sec" target="_blank" rel="nofollow noopener">Canale</a>
+        <a href="https://www.youtube.com/@silver60sec/playlists" target="_blank" rel="nofollow noopener">Playlist</a>
+        <a href="https://www.youtube.com/@silver60sec/videos" target="_blank" rel="nofollow noopener">Ultimi video</a>
+        <a href="https://www.youtube.com/@silver60sec/about" target="_blank" rel="nofollow noopener">Info</a>
+      </div>
+      <div style="text-align:center; margin-top:8px;">© <span id="y"></span> • Silver60Sec</div>
+    </footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
