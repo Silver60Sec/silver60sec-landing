@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Silver60Sec — Micro‑hack di produttività per over‑50</title>
-  <meta name="description" content="Micro‑hack di produttività per over‑50: scorciatoie, tool e AI in 60 secondi. Tutorial semplici, esempi concreti e risultati veloci.">
+  <title>Contatti — Silver60Sec</title>
+  <meta name="description" content="Come contattare Silver60Sec per domande e collaborazioni.">
   <link rel="canonical" href="https://silver60sec.netlify.app/">
   <meta name="robots" content="index,follow">
   <!-- Inserisci qui (opzionale) il meta di verifica GSC di questa property -->
   <!-- <meta name="google-site-verification" content="PASTE_TOKEN_FOR_https://silver60sec.github.io/silver60sec-landing/"> -->
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="logo-512.png">
-  <meta property="og:title" content="Silver60Sec — Micro‑hack di produttività per over‑50">
-  <meta property="og:description" content="Micro‑hack di produttività per over‑50: scorciatoie, tool e AI in 60 secondi. Tutorial semplici, esempi concreti e risultati veloci.">
+  <meta property="og:title" content="Contatti — Silver60Sec">
+  <meta property="og:description" content="Come contattare Silver60Sec per domande e collaborazioni.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://silver60sec.github.io/silver60sec-landing/">
   <meta property="og:image" content="logo-512.png">
@@ -93,34 +93,17 @@ footer { margin-top: 40px; padding-top: 22px; border-top: 1px dashed rgba(255,25
     
 <section class="section">
   <div class="card">
-    <p>Se hai superato i 50 anni e vuoi lavorare meglio con il digitale senza perdere ore in tutorial infiniti,
-       Silver60Sec è il tuo canale: micro‑hack di produttività spiegati in modo chiaro, pratico e rispettoso del tuo tempo.
-       Ogni video dura circa un minuto e va dritto al punto: niente premesse interminabili, niente tecnicismi inutili.</p>
-    <p>Qui trovi scorciatoie per computer e smartphone, trucchi per organizzare documenti e password, automatizzare attività ripetitive,
-       usare l’intelligenza artificiale in modo semplice e scegliere le app davvero utili. Parliamo di gestione del tempo, to‑do list efficaci,
-       note veloci, promemoria condivisi, modelli pronti per email e strumenti per catturare idee al volo.</p>
-    <p>Ogni episodio è pensato per chi ha esperienza e non vuole farsi bloccare dalla tecnologia: spiego cosa toccare, dove cliccare e perché,
-       con esempi concreti e passaggi numerati. Il focus è sui risultati: risparmiare minuti ogni giorno, ridurre errori, rendere più fluido il lavoro ibrido,
-       proteggere la privacy e migliorare la qualità della vita digitale. Se ti riconosci in questo approccio — concreto e orientato ai risultati —
-       iscriviti e inizia dai tre Shorts più visti qui sotto.</p>
+    <h2>Contatti</h2>
+    <p>Per collaborazioni, domande o suggerimenti puoi usare i canali qui sotto. Rispondo appena possibile.</p>
+    <ul>
+      <li>Commenti sotto i video YouTube: luogo migliore per domande veloci.</li>
+      <li>Community YouTube: annunci e sondaggi per scegliere i prossimi argomenti.</li>
+      <li>Segnalazioni tecniche sulla pagina: apri un issue sul repository GitHub (se disponibile).</li>
+    </ul>
+    <p>Se hai un’idea per un micro‑hack specifico, descrivi il problema in 2 righe: dispositivo, app, obiettivo.
+       In questo modo posso valutare subito la fattibilità e inserirlo nella scaletta.</p>
   </div>
 </section>
-
-<section class="section">
-  <h2 style="text-align:center; margin:8px 0 12px; font-size:clamp(22px,3vw,28px);">I 3 Shorts più visti</h2>
-  <div class="shorts">
-    <div id="short-1" class="short-tile"></div>
-    <div id="short-2" class="short-tile"></div>
-    <div id="short-3" class="short-tile"></div>
-  </div>
-  <div id="yt-debug" style="margin-top:10px; color:#ff8080; font:14px/1.4 system-ui"></div>
-</section>
-
-<script>
-function iso8601ToSeconds(iso){const m=iso.match(/PT(?:(\d+)M)?(?:(\d+)S)?/);if(!m)return 0;return parseInt(m[1]||'0',10)*60+parseInt(m[2]||'0',10);}
-function makeTile(id,title){const d=document.createElement('div');d.className='short-tile';d.innerHTML='<iframe allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" src="https://www.youtube-nocookie.com/embed/'+id+'?modestbranding=1&rel=0&playsinline=1"></iframe><div class="short-caption">'+(title||'Short')+'</div>';return d;}
-(async function getTop3Shorts(){const dbg=document.getElementById('yt-debug');try{const s=new URL('https://www.googleapis.com/youtube/v3/search');s.search=new URLSearchParams({key:'AIzaSyBZfeYXkGthbCZdxJNCysMk7vdwscNb_RU',channelId:'UCncOQ7gKNz8YlIFpBDUfhtg',part:'id',type:'video',maxResults:'50',order:'viewCount'}).toString();const sRes=await fetch(s);if(!sRes.ok)throw new Error('Search fetch failed: '+sRes.status);const sJson=await sRes.json();const ids=(sJson.items||[]).map(i=>i.id&&i.id.videoId).filter(Boolean);if(!ids.length)throw new Error('Nessun video trovato');const v=new URL('https://www.googleapis.com/youtube/v3/videos');v.search=new URLSearchParams({key:'AIzaSyBZfeYXkGthbCZdxJNCysMk7vdwscNb_RU',id:ids.join(','),part:'contentDetails,statistics,snippet'}).toString();const vRes=await fetch(v);if(!vRes.ok)throw new Error('Videos fetch failed: '+vRes.status);const vJson=await vRes.json();const shorts=(vJson.items||[]).filter(v=>iso8601ToSeconds(v.contentDetails?.duration||'')<=61);const top3=(shorts.length?shorts:(vJson.items||[])).sort((a,b)=>parseInt(b.statistics?.viewCount||'0',10)-parseInt(a.statistics?.viewCount||'0',10)).slice(0,3);const holders=[document.getElementById('short-1'),document.getElementById('short-2'),document.getElementById('short-3')];top3.forEach((vid,i)=>{holders[i].appendChild(makeTile(vid.id,vid.snippet?.title));});}catch(e){dbg.textContent='YT API error: '+(e&&e.message?e.message:e);}})();
-</script>
 
     <footer>
       <div class="footer-links">

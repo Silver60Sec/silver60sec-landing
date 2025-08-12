@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Silver60Sec — Micro‑hack di produttività per over‑50</title>
-  <meta name="description" content="Micro‑hack di produttività per over‑50: scorciatoie, tool e AI in 60 secondi. Tutorial semplici, esempi concreti e risultati veloci.">
+  <title>About — Silver60Sec</title>
+  <meta name="description" content="Chi è Silver60Sec e cosa trovi nel canale: micro‑hack rapidi e pratici per over‑50.">
   <link rel="canonical" href="https://silver60sec.netlify.app/">
   <meta name="robots" content="index,follow">
   <!-- Inserisci qui (opzionale) il meta di verifica GSC di questa property -->
   <!-- <meta name="google-site-verification" content="PASTE_TOKEN_FOR_https://silver60sec.github.io/silver60sec-landing/"> -->
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="logo-512.png">
-  <meta property="og:title" content="Silver60Sec — Micro‑hack di produttività per over‑50">
-  <meta property="og:description" content="Micro‑hack di produttività per over‑50: scorciatoie, tool e AI in 60 secondi. Tutorial semplici, esempi concreti e risultati veloci.">
+  <meta property="og:title" content="About — Silver60Sec">
+  <meta property="og:description" content="Chi è Silver60Sec e cosa trovi nel canale: micro‑hack rapidi e pratici per over‑50.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://silver60sec.github.io/silver60sec-landing/">
   <meta property="og:image" content="logo-512.png">
@@ -93,34 +93,17 @@ footer { margin-top: 40px; padding-top: 22px; border-top: 1px dashed rgba(255,25
     
 <section class="section">
   <div class="card">
-    <p>Se hai superato i 50 anni e vuoi lavorare meglio con il digitale senza perdere ore in tutorial infiniti,
-       Silver60Sec è il tuo canale: micro‑hack di produttività spiegati in modo chiaro, pratico e rispettoso del tuo tempo.
-       Ogni video dura circa un minuto e va dritto al punto: niente premesse interminabili, niente tecnicismi inutili.</p>
-    <p>Qui trovi scorciatoie per computer e smartphone, trucchi per organizzare documenti e password, automatizzare attività ripetitive,
-       usare l’intelligenza artificiale in modo semplice e scegliere le app davvero utili. Parliamo di gestione del tempo, to‑do list efficaci,
-       note veloci, promemoria condivisi, modelli pronti per email e strumenti per catturare idee al volo.</p>
-    <p>Ogni episodio è pensato per chi ha esperienza e non vuole farsi bloccare dalla tecnologia: spiego cosa toccare, dove cliccare e perché,
-       con esempi concreti e passaggi numerati. Il focus è sui risultati: risparmiare minuti ogni giorno, ridurre errori, rendere più fluido il lavoro ibrido,
-       proteggere la privacy e migliorare la qualità della vita digitale. Se ti riconosci in questo approccio — concreto e orientato ai risultati —
-       iscriviti e inizia dai tre Shorts più visti qui sotto.</p>
+    <h2>Chi sono e cosa trovi qui</h2>
+    <p>Silver60Sec nasce per chi ha superato i 50 anni e vuole usare la tecnologia in modo pratico, senza perdere tempo.
+       Ogni contenuto è pensato per arrivare al punto in 60 secondi: niente giri di parole, solo passaggi chiari,
+       schermate essenziali e risultati verificabili.</p>
+    <p>Nel canale troverai micro‑hack per organizzare documenti e foto, proteggere la privacy, creare promemoria davvero utili,
+       semplificare la posta e tenere in ordine le password. Uso esempi concreti e mostro dove cliccare: l’obiettivo è farti risparmiare
+       minuti ogni giorno e rendere il digitale meno complicato.</p>
+    <p>Questa pagina esiste perché i motori di ricerca comprendono meglio un sito con più sezioni e spiegazioni testuali.
+       Se arrivi da Google e ti interessa ciò che leggi, passa dalla Home per vedere i 3 Shorts più visti e iscriverti al canale.</p>
   </div>
 </section>
-
-<section class="section">
-  <h2 style="text-align:center; margin:8px 0 12px; font-size:clamp(22px,3vw,28px);">I 3 Shorts più visti</h2>
-  <div class="shorts">
-    <div id="short-1" class="short-tile"></div>
-    <div id="short-2" class="short-tile"></div>
-    <div id="short-3" class="short-tile"></div>
-  </div>
-  <div id="yt-debug" style="margin-top:10px; color:#ff8080; font:14px/1.4 system-ui"></div>
-</section>
-
-<script>
-function iso8601ToSeconds(iso){const m=iso.match(/PT(?:(\d+)M)?(?:(\d+)S)?/);if(!m)return 0;return parseInt(m[1]||'0',10)*60+parseInt(m[2]||'0',10);}
-function makeTile(id,title){const d=document.createElement('div');d.className='short-tile';d.innerHTML='<iframe allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" src="https://www.youtube-nocookie.com/embed/'+id+'?modestbranding=1&rel=0&playsinline=1"></iframe><div class="short-caption">'+(title||'Short')+'</div>';return d;}
-(async function getTop3Shorts(){const dbg=document.getElementById('yt-debug');try{const s=new URL('https://www.googleapis.com/youtube/v3/search');s.search=new URLSearchParams({key:'AIzaSyBZfeYXkGthbCZdxJNCysMk7vdwscNb_RU',channelId:'UCncOQ7gKNz8YlIFpBDUfhtg',part:'id',type:'video',maxResults:'50',order:'viewCount'}).toString();const sRes=await fetch(s);if(!sRes.ok)throw new Error('Search fetch failed: '+sRes.status);const sJson=await sRes.json();const ids=(sJson.items||[]).map(i=>i.id&&i.id.videoId).filter(Boolean);if(!ids.length)throw new Error('Nessun video trovato');const v=new URL('https://www.googleapis.com/youtube/v3/videos');v.search=new URLSearchParams({key:'AIzaSyBZfeYXkGthbCZdxJNCysMk7vdwscNb_RU',id:ids.join(','),part:'contentDetails,statistics,snippet'}).toString();const vRes=await fetch(v);if(!vRes.ok)throw new Error('Videos fetch failed: '+vRes.status);const vJson=await vRes.json();const shorts=(vJson.items||[]).filter(v=>iso8601ToSeconds(v.contentDetails?.duration||'')<=61);const top3=(shorts.length?shorts:(vJson.items||[])).sort((a,b)=>parseInt(b.statistics?.viewCount||'0',10)-parseInt(a.statistics?.viewCount||'0',10)).slice(0,3);const holders=[document.getElementById('short-1'),document.getElementById('short-2'),document.getElementById('short-3')];top3.forEach((vid,i)=>{holders[i].appendChild(makeTile(vid.id,vid.snippet?.title));});}catch(e){dbg.textContent='YT API error: '+(e&&e.message?e.message:e);}})();
-</script>
 
     <footer>
       <div class="footer-links">
